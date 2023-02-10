@@ -83,11 +83,15 @@ yarn add -D cross-env
 
 ## storybook
 
+To run your Storybook, type: `yarn storybook`
+
 ```bash
 npx sb init --builder webpack5
+yarn add util
+yarn add typescript@"<4.8"
 ```
 
-To run your Storybook, type: `yarn storybook`
+エラーの関係で typescript のバージョンは上のように指定。[^3]
 
 ### Adding Webpack as a resolution dependency
 
@@ -101,9 +105,13 @@ Append this to your `package.json`
 }
 ```
 
+▼ 上記の設定してもエラーが出た時下のコマンドが必要かも[^2]
+
 ```bash
 yarn add -D @storybook/react
 yarn add @storybook/manager-webpack5
 ```
 
 [^1]: https://typicode.github.io/husky/#/
+[^2]: https://stackoverflow.com/questions/64402821/module-not-found-error-cant-resolve-util-in-webpack
+[^3]: https://stackoverflow.com/questions/73507563/deprecationwarning-getmutableclone-has-been-deprecated-since-v4-0-0-use-an-a
