@@ -45,5 +45,6 @@ export const parameters = {
     },
   },
   viewport: { viewports: customViewports },
-  layout: 'fullscreen',
+  // layout: 'fullscreen',
+  layout: 'centered',
 };
