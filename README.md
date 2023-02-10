@@ -16,3 +16,25 @@ yarn build
     "npm": "please-use-yarn"
   },
 ```
+
+## ESlint
+
+```bash
+yarn lint
+```
+
+## prettier
+
+```json
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prettier": "prettier --write ." // <--
+  },
+```
+
+```bash
+yarn prettier
+```
