@@ -66,6 +66,7 @@ git push
 
 ```bash
 yarn add -D @commitlint/config-conventional @commitlint/cli
+npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 ```
 
 [^1]: https://typicode.github.io/husky/#/
