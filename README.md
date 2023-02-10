@@ -56,4 +56,16 @@ npx husky add .husky/pre-commit "yarn lint"
 npx husky add .husky/pre-push "yarn build"
 ```
 
+```bash
+git add .
+git commit -m "comment"
+git push
+```
+
+## commitlint.config.js
+
+```bash
+yarn add -D @commitlint/config-conventional @commitlint/cli
+```
+
 [^1]: https://typicode.github.io/husky/#/
