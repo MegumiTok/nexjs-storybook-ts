@@ -105,11 +105,17 @@ Append this to your `package.json`
 }
 ```
 
-▼ 上記の設定してもエラーが出た時下のコマンドが必要かも[^2]
+▼ 上記の設定してもエラーが出た時は以下のインストールが必要かも[^2]
 
 ```bash
 yarn add -D @storybook/react
 yarn add @storybook/manager-webpack5
+```
+
+## SCSS
+
+```bash
+yarn add -D sass
 ```
 
 [^1]: https://typicode.github.io/husky/#/
