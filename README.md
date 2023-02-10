@@ -81,4 +81,29 @@ yarn add -D cross-env
   },
 ```
 
+## storybook
+
+```bash
+npx sb init --builder webpack5
+```
+
+To run your Storybook, type: `yarn storybook`
+
+### Adding Webpack as a resolution dependency
+
+> We need this to ensure the webpack is installed as a dependency, somehow this will cause a bug if we don’t install it
+
+Append this to your `package.json`
+
+```json
+"resolutions": {
+    "webpack": "^5"
+}
+```
+
+```bash
+yarn add -D @storybook/react
+yarn add @storybook/manager-webpack5
+```
+
 [^1]: https://typicode.github.io/husky/#/
