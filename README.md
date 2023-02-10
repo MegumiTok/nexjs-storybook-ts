@@ -69,4 +69,16 @@ yarn add -D @commitlint/config-conventional @commitlint/cli
 npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 ```
 
+## cross-env
+
+```bash
+yarn add -D cross-env
+```
+
+```json
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+  },
+```
+
 [^1]: https://typicode.github.io/husky/#/
