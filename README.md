@@ -38,3 +38,22 @@ yarn lint
 ```bash
 yarn prettier
 ```
+
+- インストール後、`.prettierrc`と`.prettierignore`を作成する
+
+## husky を利用して git hooks を作る[^1]
+
+```bash
+yarn add -D husky
+npx husky install
+```
+
+- `.huskyrc`フォルダが作成される
+  > husky - Git hooks installed
+
+```bash
+npx husky add .husky/pre-commit "yarn lint"
+npx husky add .husky/pre-push "yarn build"
+```
+
+[^1]: https://typicode.github.io/husky/#/
