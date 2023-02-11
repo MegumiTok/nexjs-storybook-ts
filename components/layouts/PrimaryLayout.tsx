@@ -1,3 +1,5 @@
+//http://localhost:3000/sidebarNav用に保存
+
 import Head from 'next/head';
 import styles from './PrimaryLayout.module.css';
 

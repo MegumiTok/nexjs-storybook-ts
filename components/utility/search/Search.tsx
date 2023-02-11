@@ -1,9 +1,9 @@
 import { useState } from 'react';
 export interface ISearch {
-  sampleTextProp: string;
+  // sampleTextProp: string;
 }
 
-const Search: React.FC<ISearch> = ({ sampleTextProp }) => {
+const Search: React.FC<ISearch> = () => {
   const [searchTerm, setSearchTerm] = useState<string>();
   return (
     <form
@@ -23,13 +23,15 @@ const Search: React.FC<ISearch> = ({ sampleTextProp }) => {
       <div className="space-x-3">
         <button
           type="submit"
-          className="border-0 p-2 px-6 bg-slate-100 rounded-md"
+          // className="border-0 p-2 px-6 bg-slate-100 rounded-md"
+          className="btn-primary"
         >
           Google Search
         </button>
         <button
           type="submit"
-          className="border-0 p-2 px-6 bg-slate-100 rounded-md"
+          // className="border-0 p-2 px-6 bg-slate-100 rounded-md"
+          className="btn-primary"
         >
           I&apos;m Feeling Lucky
         </button>
