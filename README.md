@@ -184,6 +184,15 @@ OPTIONAL: If you want to keep using CSS modules as well:
 yarn add -D storybook-css-modules-preset
 ```
 
+### Next.js router
+
+> コンポーネント内で next/router を使用している場合、そのままではエラーが出るのでこのアドオンでエラーを回避する。
+> Start by installing the addon and [reading its documentation](https://storybook.js.org/addons/storybook-addon-next-router).
+
+```bash
+yarn add -D storybook-addon-next-router
+```
+
 [^1]: https://typicode.github.io/husky/#/
 [^2]: https://stackoverflow.com/questions/64402821/module-not-found-error-cant-resolve-util-in-webpack
 [^3]: https://stackoverflow.com/questions/73507563/deprecationwarning-getmutableclone-has-been-deprecated-since-v4-0-0-use-an-a

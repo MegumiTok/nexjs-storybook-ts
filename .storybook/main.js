@@ -11,6 +11,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     'storybook-css-modules-preset', //  to keep using CSS modules
+    'storybook-addon-next-router',
     {
       /**
        * Fix Storybook issue with PostCSS@8
