@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import PrimaryLayout, {
   IPrimaryLayout,
 } from '../components/layouts/PrimaryLayout';
-import { mockPrimaryLayoutProps } from '../components/layouts/PrimaryLayout.mocks';
+import { mockPrimaryLayoutProps } from '../components/layouts/primary/PrimaryLayout.mocks';
 
 export default {
   title: 'layouts/PrimaryLayout',

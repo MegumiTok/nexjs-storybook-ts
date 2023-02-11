@@ -1,4 +1,4 @@
-import { IPrimaryLayout } from './PrimaryLayout';
+import { IPrimaryLayout } from '../PrimaryLayout';
 
 const base: IPrimaryLayout = {
   children: '{{component}}',
