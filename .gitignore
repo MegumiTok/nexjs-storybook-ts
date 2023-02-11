@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# private
+# ディレクトリ内に何らかのファイルが配置されている事に注意して下さい。Git では空っぽのディレクトリは管理できません。
+pra/
