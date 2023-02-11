@@ -112,6 +112,53 @@ yarn add -D @storybook/react
 yarn add @storybook/manager-webpack5
 ```
 
+### storybook で alias を使うための設定[^5]
+
+▼ `.storybook/main.js`
+
+```js
+const path = require('path'); //<--
+module.exports = {
+  stories: [
+    '../stories/**/*.stories.mdx',
+    '../stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../components/pra/**/*.stories.@(js|jsx|ts|tsx)',
+  ],
+  staticDirs: ['../public'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    'storybook-css-modules-preset', //  to keep using CSS modules
+    {
+      /**
+       * Fix Storybook issue with PostCSS@8
+       * @see https://github.com/storybookjs/storybook/issues/12668#issuecomment-773958085
+       */
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
+  ],
+  framework: '@storybook/react',
+  core: {
+    builder: '@storybook/builder-webpack5',
+  },
+  //▼　追加　▼
+  webpackFinal: async (config, { configType }) => {
+    config.resolve.modules = [path.resolve(__dirname, '..'), 'node_modules'];
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, '../'),
+    };
+    return config;
+  },
+};
+```
+
 ## SCSS
 
 ```bash
@@ -141,3 +188,4 @@ yarn add -D storybook-css-modules-preset
 [^2]: https://stackoverflow.com/questions/64402821/module-not-found-error-cant-resolve-util-in-webpack
 [^3]: https://stackoverflow.com/questions/73507563/deprecationwarning-getmutableclone-has-been-deprecated-since-v4-0-0-use-an-a
 [^4]: https://tailwindcss.com/docs/guides/nextjs
+[^5]: https://github.com/storybookjs/storybook/issues/11639
