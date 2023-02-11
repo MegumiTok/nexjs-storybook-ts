@@ -118,6 +118,26 @@ yarn add @storybook/manager-webpack5
 yarn add -D sass
 ```
 
+## Install Tailwind CSS [^4]
+
+```bash
+yarn add -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+### Storybook Support for Tailwind
+
+```bash
+yarn add -D @storybook/addon-postcss
+```
+
+OPTIONAL: If you want to keep using CSS modules as well:
+
+```bash
+yarn add -D storybook-css-modules-preset
+```
+
 [^1]: https://typicode.github.io/husky/#/
 [^2]: https://stackoverflow.com/questions/64402821/module-not-found-error-cant-resolve-util-in-webpack
 [^3]: https://stackoverflow.com/questions/73507563/deprecationwarning-getmutableclone-has-been-deprecated-since-v4-0-0-use-an-a
+[^4]: https://tailwindcss.com/docs/guides/nextjs
